@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+  <main>
+    <section class="login-section">
+      <h2 class="login-title">Log In</h2>
+
+      <!-- Display Error Message -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        
+        <!-- Email Input -->
+        <div class="input-container">
+          <input 
+            type="email" 
+            id="email" 
+            formControlName="email" 
+            placeholder="Email" 
+            required
+          />
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error-message">
+            Email is required and must be valid.
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-container">
+          <input 
+            type="password" 
+            id="password" 
+            formControlName="password" 
+            placeholder="Password" 
+            required
+          />
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
+            Password is required.
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+          <button type="submit" [disabled]="loginForm.invalid || loading">Log In</button>
+          <button type="button" (click)="navigateToRegister()">Register</button>
+        </div>
+
+        <!-- Loading State -->
+        <div *ngIf="loading" class="loading-message">
+          Logging in, please wait...
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
