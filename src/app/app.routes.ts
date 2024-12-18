@@ -12,7 +12,7 @@ export const routes: Routes = [
   { 
     path: 'dashboard', 
     component: DashboardComponent, 
-    canActivate: [AuthGuard] // Protecting 'dashboard' route with AuthGuard
+    //canActivate: [AuthGuard] // Protecting 'dashboard' route with AuthGuard
   }
 ];
 

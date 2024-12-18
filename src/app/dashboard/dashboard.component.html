@@ -1,1 +1,178 @@
-<p>dashboard works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    /* Basic Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .sidebar {
+      background-color: #e91e63;
+      color: #fff;
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .sidebar a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #d81b60;
+    }
+    .main-content {
+      margin-left: 260px;
+      padding: 20px;
+    }
+    .top-cards {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      margin: 10px;
+      text-align: center;
+    }
+    .recent-projects, .new-customers {
+      background-color: #fff;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+    .new-customers ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .new-customers li {
+      margin: 10px 0;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+    .header input {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Accusoft</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Customers</a>
+    <a href="#">Projects</a>
+    <a href="#">Orders</a>
+    <a href="#">Inventory</a>
+    <a href="#">Accounts</a>
+    <a href="#">Tasks</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="header">
+      <h1>Dashboard</h1>
+      <input type="text" placeholder="Search here...">
+    </div>
+
+    <!-- Top Cards -->
+    <div class="top-cards">
+      <div class="card">
+        <h3>54</h3>
+        <p>Customers</p>
+      </div>
+      <div class="card">
+        <h3>79</h3>
+        <p>Projects</p>
+      </div>
+      <div class="card">
+        <h3>124</h3>
+        <p>Orders</p>
+      </div>
+      <div class="card">
+        <h3>$6k</h3>
+        <p>Income</p>
+      </div>
+    </div>
+
+    <!-- Recent Projects -->
+    <div class="recent-projects">
+      <h2>Recent Projects</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Project Title</th>
+            <th>Department</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>UX/UI Design</td>
+            <td>UI Team</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <td>Web Development</td>
+            <td>Dev Team</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>Data Analysis</td>
+            <td>Data Team</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- New Customers -->
+    <div class="new-customers">
+      <h2>New Customers</h2>
+      <ul>
+        <li>John D. Cunningham</li>
+        <li>Jane A. Smith</li>
+        <li>Robert B. Brown</li>
+        <li>Emily J. Davis</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
